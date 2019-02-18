@@ -1,0 +1,16 @@
+<h1>Products</h1>
+
+<h3><%= display_cart(@cart) %></h3>
+
+<div>
+
+  <%= form_tag products_add_path, method: "POST" do %>
+
+  <%= label_tag :product, "Items to add to cart:" %>
+  <%= text_field_tag :product %>
+
+  <%= submit_tag "add to cart" %>
+
+  <% end %>
+
+</div>
